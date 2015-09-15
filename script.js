@@ -43,14 +43,13 @@ var hr3 = r3/2;
 
 function rgbString(r, g, b) {
 	return "rgb(" + Math.floor(r) + "," + Math.floor(g) + "," + Math.floor(b) + ")";
-	//return "rgb(255,255,255)"
 }
 
 function isoCube(ctx, s, c) {
 	ctx.beginPath();
 
 	if(c.grabbed) {
-		ctx.fillStyle = "#ee6666"; //ee6666
+		ctx.fillStyle = "#000000";
 	} else {
 		var r = 230 - 80 * c.off;
 		var g = 230;
@@ -66,7 +65,7 @@ function isoCube(ctx, s, c) {
     ctx.fill();
 
     ctx.beginPath();
-    ctx.fillStyle = "#999999"; // 999999
+    ctx.fillStyle = "#000000";
     ctx.moveTo(0, 0);
     ctx.lineTo(0, 10 * s);
     ctx.lineTo(hr3 * s, 10 * s - 0.5 * s);
@@ -75,7 +74,7 @@ function isoCube(ctx, s, c) {
     ctx.fill();
 
     ctx.beginPath();
-    ctx.fillStyle = "#000000"; // 000000
+    ctx.fillStyle = "#000000";
     ctx.moveTo(0, 0);
     ctx.lineTo(0, 10 * s);
     ctx.lineTo(-hr3 * s, 10 * s - 0.5 * s);
