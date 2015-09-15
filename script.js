@@ -49,11 +49,13 @@ function isoCube(ctx, s, c) {
 	ctx.beginPath();
 
 	if(c.grabbed) {
-		ctx.fillStyle = "#000000";
+		ctx.fillStyle = rgbString(0, 0, 255);
 	} else {
-		var r = 230 - 80 * c.off;
-		var g = 230;
-		var b = 230 + 80 * c.off;
+		
+		// TODO: Add offset value
+		var r = 0;
+		var g = 191 - 80 * c.off;
+		var b = 255 - 80 * c.off;
 		ctx.fillStyle = rgbString(r, g, b);
 	}
 
@@ -65,7 +67,7 @@ function isoCube(ctx, s, c) {
     ctx.fill();
 
     ctx.beginPath();
-    ctx.fillStyle = "#000000";
+    ctx.fillStyle = rgbString(0, 0, 255);
     ctx.moveTo(0, 0);
     ctx.lineTo(0, 10 * s);
     ctx.lineTo(hr3 * s, 10 * s - 0.5 * s);
@@ -74,7 +76,7 @@ function isoCube(ctx, s, c) {
     ctx.fill();
 
     ctx.beginPath();
-    ctx.fillStyle = "#000000";
+    ctx.fillStyle = rgbString(0, 191, 255);
     ctx.moveTo(0, 0);
     ctx.lineTo(0, 10 * s);
     ctx.lineTo(-hr3 * s, 10 * s - 0.5 * s);
